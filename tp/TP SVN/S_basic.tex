@@ -1,0 +1,86 @@
+\chapter{Utilisation minimale}
+
+\section{Création du dépôt}
+
+Après s'être inscrit sur le serveur, chaque membre peut être ajouté par un chef de groupe à un dépôt.
+Ce dernier doit donc se rendre sur la page de création de dépôt et compléter le formulaire, en choisissant le dépôt prédéfini correspondant au \tp{} \svn.
+
+
+\section{Récupération du projet}
+
+\subsection{À la conquète d'un monde meilleur}
+
+Après avoir créé un dépôt sur un serveur, la première opération à réaliser s'appelle le \og check out\fg{}. Elle consiste à télécharger la dernière version connue des fichiers du dépôt.\\
+
+Pour ce faire, placez-vous dans un répertoire quelconque, effectuez un clic-droit et choisissez \emph{SVN Checkout...}. Une fenêtre vous demandera alors d'entrer l'adresse de votre dépôt. Elle aura la forme suivante~:\\\verb https://10.42.X.X/svn/PROJET/trunk/ où \texttt{PROJET} est à remplacer par le nom du dépôt que vous avez choisi.
+
+Gardez les autres options inchangées.
+
+Une fois que vous aurez validé, une autre fenêtre apparaîtra, indiquant l'avancement. Lorsque la dernière ligne affichera \emph{Completed At revision: X}, vous pourrez la fermer et observer avec attention votre nouveau dossier~!
+
+\subsection{Exploration du nouveau monde}
+
+Le nouveau dossier créé par \svn se voit complété par l'emblème d'un disque vert~! Contrairement à ce que vous devez sans doute penser, cela ne signifie pas que les fichiers que vous possédez sont à jour, cela signifie que vous n'avez effectué aucune modification sur les fichiers contenus.\\
+
+Si vous rentrez dans le dossier vous allez voir encore de nombreux emblèmes verts. Ouvrez l'un des fichier et modifiez son contenu.
+
+Après avoir enregistré vos modifications, l'emblème devrait\footnote{Il est relativement courant que les emblèmes affichés ne correspondent pas à la réalité, il s'agit simplement d'un problème d'affichage, le statut du fichier pour /svn reste correct} se changer en un disque rouge. Toute l'arborescence jusqu'à ce fichier se trouve également placardé de cet emblème rouge.
+
+
+\section{Ajouter un fichier sur le dépôt}
+
+\helpbox[bleu]{Info}{il n'y a pas d'obligation quant à la réalisation de toutes les étapes de ce \tp{} mais nous vous conseillons fortement de tester chacun des points développés dans ce chapitre.}
+
+Lorsque vous récupérez le projet via un \emph{check out}, tous les fichiers présents sont directement sous contrôle de version, c'est-à-dire les fichiers dont le serveur garde une copie et l'historique de ses modifications. Ce n'est pas le cas des fichiers que vous pourriez ajouter manuellement ou automatiquement.\\
+
+Ajoutez un nouveau fichier texte dans l'un des répertoires du projet. Vous pouvez observer qu'un emblème bleu foncé apparaît. Pour l'envoyer sur le dépôt, cliquez-droit dessus et dans le menu \emph{TortoiseSVN}, choisissez \emph{Add...}.
+
+Si vous ajoutez plusieurs fichiers, une fenêtre apparaîtra pour que vous confirmiez la liste des fichiers à ajouter. Si seulement un fichier est sélectionné, il est automatiquement ajouté.\\
+
+Les nouveaux fichiers surveillés apparaissent avec un emblème bleu clair.
+
+
+\section{Envoyer ses modifications sur le serveur}
+
+Une fois que vous avez modifié et ajouté quelques fichiers, retournez au niveau du répertoire racine du projet et effectuez un clic-droit pour choisir \emph{SVN Commit...}.
+
+Une nouvelle fenêtre va apparaître avec dans la partie basse la liste des fichiers dont le statut a changé ou est inconnu (les fichiers que vous avez oublié d'ajouter~!).
+
+La partie haute quant à elle attend un message. Décrivez-y rapidement les changements que vous avez apporté à votre code. Dans notre cas, cela pourrait être~: \og Ajout de ``Le lièvre et la tortue''\fg{} ou encore \og Correction orthographique dans ``Le lion et le rat''\fg\ldots\\
+
+Soyez le plus précis et concis possible. Lorsqu'à un moment vous voudrez rechercher une modification particulière, il vous sera plus facile de la rechercher que si les messages ne sont pas assez explicites.\\
+
+Une fois la fenêtre validée, les modifications sont envoyées. Lorsque c'est terminé, le message \emph{Completed At revision: X} sera affiché. S'il n'y a pas eu de modifications sur le dépôt, le numéro de la révision devrait être simplement incrémenté de un.\\
+
+Effectuez chacun à votre tour des modifications sur des fichiers \textbf{différents} et envoyez-les sur le dépôt.
+
+
+\section{Mettre à jour sa copie de travail}
+
+Vous devriez régulièrement mettre à jour votre répertoire de travail. En général~: avant de modifier un fichier qui aurait pu être modifié par un autre membre et \textbf{toujours} avant d'envoyer ses modifications sur le serveur.\\
+
+Pour se faire, cliquez-droit sur le répertoire racine de votre projet et sélectionnez \emph{SVN Update}. Une fenêtre de progression s'affichera. Si vous ne possédez pas la dernière révision disponible sur le serveur, les fichiers qui diffèrent seront téléchargés.
+
+Comme pour les autres fenêtres de progression, \emph{Completed At revision: X} indiquera que la mise à jour est terminée et s'est bien passée. Nous verrons à la section \ref{sec:conflits} que faire lorsque la mise à jour ne se passe pas bien.
+
+
+\section{Les conflits}
+\label{sec:conflits}
+
+Un conflit se produit lorsque deux utilisateurs différents modifient une même ligne dans un même fichier. \svn{} ne sait alors plus quoi faire et vous appelle à la rescousse en affichant un message rouge assez inquiétant.\\
+
+Créez un conflit sur l'un des fichiers de votre dépôt en en modifiant-un sur l'un des membres du groupe, envoyez les modifications sur le dépôt et faites des modifications différentes aux mêmes endroits sur l'ordinateur d'un second membre sans mettre à jour la copie de travail préalablement.
+
+Une fois les modifications enregistrées, mettez à jour la copie de travail et vous devriez avoir un conflit.\\
+
+Un conflit est matérialisé par un triangle jaune-orange, suivez les emblèmes jusqu'à retrouver le fichier en cause. Cliquez-droit dessus et sélectionnez l'élément \emph{Edit conflicts} du menu \emph{TortoiseSVN}.
+
+La nouvelle fenêtre présente en haut à gauche le fichier tel qu'il est sur le serveur, en haut à droite le fichier modifié par vos soins et en bas le fichier résultat.
+Seules les lignes rouges nous intéressent. Vous pouvez voir qu'elles sont remplacées par des \texttt{????} dans la vue fusionnée (partie basse).
+
+Sélectionnez une ligne rouge dans l'une des vues haute et utilisez la barre d'outils pour garder les modifications du serveur (\emph{Use 'theirs' text block}) ou les votres (\emph{Use 'mine' text block}).
+Si le résultat devait être une fusion plus fine (certains mots du serveur et certains de vous), vous pouvez directement écrire ou modifier la ligne rouge dans la partie basse.\\
+
+Une fois tous les conflits éradiqués, n'oubliez pas d'enregistrer vos modifications puis de marquer le conflit comme résolu~: soit en utilisant le bouton de la barre d'outils (\emph{Mark as resolved}) ou en utilisant l'élément \emph{Resolved...} du menu TortoiseSVN.
+
+\helpbox[vert]{Informations complémentaires}{lorsqu'il y a un conflit, \svn{} crée, dans le répertoire où se trouve le fichier en conflit, 3 autres fichiers contenant vos modifications, la révision du serveur et le fichier fusionné. Tant que le conflit n'est pas résolu ces fichiers ne doivent pas être supprimés et sachez que le fichier original se retrouve barbouillé de caractères propres à \svn, ce qui empêchera votre programme de compiler~!}

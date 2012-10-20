@@ -1,0 +1,120 @@
+\chapter{Architecture d'un jeu vidéo}
+
+Un jeu vidéo est un projet intéressant~: vous aurez l’occasion de toucher à beaucoup de choses fondamentalement différentes, et opérant sur des périphériques tout aussi différents comme le réseau, le graphisme, l'interface utilisateur, la physique, l'intelligence artificielle, \ldots Vous aurez aussi à faire appel à vos talents extra-informatique afin de vous assurer que votre jeu aura une histoire palpitante, une durée de vie acceptable, et un gameplay implaquable.\\
+
+Devant cette entreprise, vous êtes quatre. Vous êtes pleins d'imagination, mais dès que vous commencez aux points ‘technique’\ldots vient cette question~: \og Par où on commence~?\fg
+
+\section[La segmentation]{Par où on commencer~? -- la segmentation~!}
+
+Comme dit précédemment, un jeu est composé de plusieurs petites briques distinctes. Vous l'aurez comprit~: il faut segmenter son travail en autant de parties qu’il y a de briques. On aura typiquement une ou deux personnes par briques~:
+
+\begin{itemize}
+  \item La brique \og UI\fg{} (Interface Utillisateur/User Interface),
+  \item la brique \og graphique\fg,
+  \item la brique \og intelligence artificielle\fg,
+  \item la brique \og réseau\fg,
+  \item la brique \og physique\fg,
+  \item la brique \og son\fg.
+\end{itemize}
+
+Seulement, parler de \og briques\fg{} ne fait pas très professionnel, alors on prend un mot plus sexy~: moteur (moteur physique, moteur graphique, etc.). Et pour faire encore plus pro, on cause en anglais (graphics engine, sound engine, physics engine, etc.)~!\\
+
+Si vous réfléchissez bien, celui qui travaille sur le graphisme, n'aura pas grand chose à échanger avec celui quit travaille avec la physique (sauf si vous faites du pixel-perfect, mais c'est une autre histoire)~! On peut donc dire que ces moteurs sont indépendants deux à deux. Et c’est justement cette indépendance qui vous permet de vous répartir les tâches efficacement. De plus, une telle indépendance rend l'utilisation de VCS (\svn, Mercurial, Git, etc.) particulièrement intéressante~: une fois qu'un moteur sera achevé, un push (commit sous \svn) permettra d'envoyer les modifications à tout le monde, en plus de permettre à plusieurs personnes de travailler efficacement sur un même moteur. Typiquement, le graphisme, l'IA, et parfois la physique sont des parties plus lourdes que les autres. Il est donc judicieux que vous formiez une répartition des tâches équilibrées du genre~:
+
+\begin{itemize}
+  \item une personne pour l'IA + le son,
+  \item une personne pour le réseau + la physique,
+  \item une personne pour l'UI et le graphisme,
+  \item une personne pour \ldots{} euh tous les moteurs sont déjà prit~!
+\end{itemize}
+
+Arf\ldots{} la quatrième personne n'aurait rien à faire~? Eh bien si~! En réalité vous ne mettrez pas une personne pour deux moteurs, mais plutôt deux personnes sur deux moteurs. De plus, certains jeux ne nécessitent pas de réseau, ou encore de physique très évoluée.\\
+
+Mais, plus que tout, une partie a été omise ici~!
+
+\section[Le \emph{core engine}]{Les données, les messages, et les liaisons entre les moteurs~: le \og core engine\fg/\og data engine\fg}
+
+Eh oui~! Car tous les moteurs énoncés précédemment peuvent, certes, fonctionner et être codés séparément, il faut tout de même les faire copuler allègrement ensemble de telle sorte à ce que naisse un vrai jeu vidéo complet. C'est pour cela que le \og Core engine\fg{} existe~: c'est lui qui se chargera d'appeler les différentes routines de chaque moteur (routine d'update d'affichage, et calcul de la physique, de lancement de la musique, de chargement d'une nouvelle scène graphique, etc.). En l'occurrence, c'est lui qui contiendra la clef des jeux vidéos~: la boucle infinie.
+
+Gné~? Une boucle infinie~? Bin oui~! Regardez~:
+
+\begin{verbatim}
+Algorithme procedure MainLoop
+Debut
+  Tant que (vrai) faire
+    Interpreter(Messages/interactions de l'utilisateur)
+    Lancer la lecture des sons qui vont bien
+    Update (physique)
+    Update (affichage)
+  Fin tant que
+Fin algorithme procedure MainLoop.
+\end{verbatim}
+
+Et une fois que vous avez compris que votre jeu sera une boucle qui \og bouclera\fg{} toutes les, environ, 0,016~secondes, tout devient presque très simple (presque parce qu’il faut quand même coder l'update de la physique, l'affichage, etc.).
+
+Mais en plus de faire ces liaisons entre les modules, le \og core engine\fg{} s’occupe aussi d'une partie sensible du jeu~: les données (d'où l'appellation non-officielle de \og data engine\fg). Quelles données~? Ma foi\ldots{} les sauvegardes, les fichiers d'histoire, les terraina, les fichiers son, \ldots{} sont des données~! D'après vous, qui dira au moteur physique \og Maintenant charges-moi cette carte\fg, ou bien \og Y'en a marre de John Lennon, mets-moi un bon Mozart pour cette scène sanglante\fg, ou encore, qui va interpréter~: \og L'utilisateur a cliqué sur quitter, sort de ta boucle infinie~!\fg, ou bien \og l'utilisateur veut changer de map\fg.\\
+
+C'est le moteur de données, \og core engine\fg, ou toute autre appellation sexy que vous lui trouverez~!\\
+
+Avec la boucle de jeu, il existe une autre boucle remarquable dans un jeu~: la boucle d'affichage. C'est généralement ce qui se trouve derrière la fonction \texttt{Update(affichage)} de la boucle de jeu~!
+
+En effet, bien souvent, votre scène est composée de divers objets que vous devez afficher à l'écran les uns après les autres. Par exemple, imaginez les petits aliens dans Space Invaders~! Vous avez beaucoup d'aliens identiques alignés~; et il y a aussi le vaisseau, les missiles, \ldots
+
+Une approche simple est de conserver une liste d’objets à dessiner à l'écran, de parcourir cette liste afin d'afficher les éléments uns à uns~! Cela donnerait donc quelque chose comme~:
+
+\begin{verbatim}
+Algorithme procedure AfficheEcran
+  Parametres locaux
+    ObjetsDessinables [] objets
+    Entier nombreObjets
+  Variables
+    Entier i
+Debut
+  Pour  i <- 0 jusqu'a nombreObjets faire
+    Dessiner (objets [i])
+  Fin pour
+Fin algorithme procedure AfficheEcran
+\end{verbatim}
+
+Il s'agit d'une bonne première approche, mais vous remarquerez que dans un projet un peu plus gros qu'un Space Invaders, les performances d'une telle approche sont très très faibles~! Pourquoi~? Eh bien parce que imaginez que votre vaisseau (dans Space Invaders) tire un missile qui ne touche aucun ennemis. Si pour une raison ou pour une autre, vous ne retirez pas ce missile de la liste d'affichage une fois qu’il est sorti de l'écran, vous tenterez de l’afficher à chaque tour de boucle de jeu. Seulement\ldots{} c’est un peu bête (et parfois dévoreur de performances) d'ordonner l'affichage d'un objet que le joueur ne pourra de toutes manières pas voir. C'est pour cela que l'on gagne beaucoup à faire un test d'appartenance d'un objet à la surface visible à l'écran.
+
+Ce qui donne par exemple~:
+
+\begin{verbatim}
+Algorithme procedure AfficheEcran
+  Parametres locaux
+    ObjetsDessinables [] objets
+    Entier nombreObjets
+  Variables
+    Entier i
+Debut
+  Pour  i <- 0 jusqu'a nombreObjets faire
+    Si (estDanslEcran (objets [i])) alors
+      Dessiner (objets [i] )
+    Fin si
+  Fin pour
+Fin algorithme procedure AfficheEcran
+\end{verbatim}
+
+Il s'agit d'une version qui donnera des résultats nettement meilleurs. Mais sachez que derrière ce test d'appartenance d'un objet à l'ecran visible, se cache des algorithmes qui peuvent être très simples (comme une simple intersection de rectangles), ou très complexes (avec par exemple des arbre de partitionnement de l'espace, et grilles, etc.). Pour un Space Invaders, de simples tests d'intersection de rectangles (cherchez ce qu’est une AABB/Axis Aligned Bounding Box) suffiront~!\\
+
+Vous savez donc maintenant comment commencer, ou du moins en théorie. Voyons voir notre jeu du jour \ldots
+
+
+\section{Space Invaders}
+
+Bon, sérieusement, il faut être en \textsc{ing1} ou être particulièrement doué pour coder un jeu complet, \og from scratch\fg, beau, avec une bonne durée de vie, toussa\ldots{} en une seule nuit.\\
+
+Space invaders est un bon projet pour commencer. Mais pour vous aider, la partie \og Core engine\fg vous est fournie en grande partie. Mais il vous faudra tout de même vous occuper des autres~!
+
+Alors, si vous avez tout suivi, vous commencerez par vous décider de qui va s'occuper de l'affichage, qui du son, et qui des entrées. Pour simplifier, il n'y a pas de réseau, de \emph{vraie} IA ou de physique ici. Mais il faudra tout de même que l'un d'entre vous achève le moteur de données, ne serait-ce que pour charger la bonne image au bon moment, ou gérer les entrées utilisateurs~! Se mettre à trois ici pour~:
+
+\begin{itemize}
+   \item un moteur graphique,
+   \item finir le moteur de données,
+   \item un moteur de sons~;
+\end{itemize}
+
+semble une bonne idée. Mais bien sûr, libre à vous de vous organiser~!
+
+Oh, et n’oubliez pas que \svn est votre ami ce soir~!

@@ -1,0 +1,61 @@
+\chapter{Utilisation basique}
+
+\section{Réaliser des opérations sur les fichiers et les dossiers}
+
+Si vous voulez renommer, couper ou copier un fichier sous contrôle de version, n'utilisez pas l'explorateur Windows, mais effectuez les actions manuellement via TortoiseSVN. En effet, l'explorateur ne va pas communiquer avec \svn{} pour lui indiquer les changements~; au moment de \emph{commiter}, il manquera des fichiers et vos modifications risquent d'être perdues.
+
+\subsection{Renommer et supprimer}
+
+Un élément du menu de TortoiseSVN vous permet d'effectuer chacune de ces actions~: respectivement Rename et Delete.
+
+\helpbox{Remarque}{Renommer consiste à supprimer un fichier du dépôt puis à en ajouter un nouveau. Si vous effectuez des modifications dans un fichier dans le même \emph{commit} qu'un renommage, vous ne pourrez pas voir les différences.}
+
+Lorsque vous supprimez un répertoire (ou renommer), celui-ci existera \emph{physiquement} jusqu'au \emph{commit} suivant avec l'emblème d'une croix rouge.
+
+\subsection{Couper, copier}
+
+Rien ne permet de faire ce genre d'opération avec TortoiseSVN, pensez simplement à supprimer le fichier avec la fonction \emph{Delete} et/ou à ajouter le nouveau fichier avec \emph{Add}.
+
+
+\section{Les numéros de révision}
+
+\subsection{Présentation}
+
+À chaque \emph{commit}, une nouveau numéro de révision lui est attribué. Ces numéros sont simplement incrémentés de un à chaque fois que le serveur reçoit un \emph{commit}. Ce numéro va vous servir à remonter dans le temps si vous en avez besoin un jour~!
+
+\subsection{Retrouver un numéro de révision}
+
+N'importe-où dans votre répertoire de travail, vous pouvez afficher la liste des \emph{commits} en choisissant \emph{Show log} dans le menu TortoiseSVN.
+
+Utilisez le champ de recherche ou parcourez la liste des révisions jusqu'à trouver votre bonheur.
+
+
+\section{Remonter le temps}
+
+\subsection{Annuler les dernières modifications d'un fichier}
+
+Si vous avez modifié un fichier et que vous n’avez pas encore envoyé vos changement au serveur, alors vous pouvez annuler vos modifications en sélectionnant le(s) fichier(s) et choisissez l'élément \emph{Revert...} du menu de TortoiseSVN puis validez.
+
+\subsection{Revenir à une version précédente d'un fichier}
+
+Utilisez l'élément \emph{Update to revision...} du menu de TortoiseSVN sur un ou plusieurs fichiers. Vous n'aurez qu'à indiquer le numéro de révision qui vous intéresse.
+
+\subsection{Récupérer le dépôt à une révision particulière}
+
+Au moment du \emph{check out}, indiquez le numéro de révision qui vous intéresse à la place de l'option \emph{HEAD revision}.
+
+\section{Bonus~: tagger des révisions}
+
+Tagger une révision permet d'accéder rapidement à un état précis du dépôt. Par exemple~: la version de la première soutenance, la version finale, une version stable intermédiaire, \ldots\\
+
+Pour ce faire, choisissez l'élément \emph{Branch/tag...} du menu de TortoiseSVN. Dans le champ \emph{To URL}, remplacez \texttt{trunk/} par \texttt{tags/TAG/} où \texttt{TAG} est le nom que vous voulez donner à cette révision.
+
+\section{Bonus~: empêcher le contrôle de version de certains fichiers}
+
+Parfois, on a besoin d'exclure (ou ignorer) des fichiers~: le fichier contenant des mots de passe, les fichiers de compilation ou encore les fichiers de configuration utilisateur (\texttt{*.csproj.user}, \texttt{*.suo}).
+
+\helpbox{Remarque}{Il est important de ne pas ajouter les fichiers des dossiers {\texttt bin/} et {\texttt obj/} générés par Visual Studio. Ces derniers ne sont utiles que pour lancer le projet et ne peuvent être versionnés (ce sont des fichiers binaires). À chaque compilation, vous seriez obligés de renvoyer ces fichiers sur le serveur alors que c'est inutile car le projet est destiné à être compilé depuis le \svn{} et non pas exécuté depuis ce dernier.\par Il en va de même pour les {\texttt .toc}, {\texttt .pdf}, {\texttt .aux}, \ldots générés par \LaTeX.}
+
+Pour ignorer un ou plusieurs fichiers, vous pouvez les ignorer en sélectionnant l'élément \emph{Add to ignore list} du menu de TortoiseSVN.\\
+
+Il est également possible d'ajouter une propriété \svn{} au dossier concerné~: \texttt{svn-ignore} qui prend comme valeur le nom des fichiers ou dossiers à ignorer. Il est possible d'utiliser l'étoile si besoin.

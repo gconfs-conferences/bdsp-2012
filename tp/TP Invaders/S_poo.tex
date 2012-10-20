@@ -1,0 +1,152 @@
+\chapter{Présentation de la programmation orientée objet}
+
+\section{Le concept}
+
+L'idée directrice de la programmation orientée objet est de regrouper les données au sein d'objets tels qu'on les voit~: une voiture, un poison, un animal, \ldots
+
+Ces données sont les caractéristiques de ces objets~; par exemple, la voirutre a une couleur, un nombre de portes, une vitesse, \ldots~; un animal a une couleur, une taille, un poids.
+
+Chacune de ces caractéristiques peut être modifiée par une ou plusieurs fonctions. Par exemple, la voiture a une fonction accélérer et ralentir qui modifie sa vitesse. Un animal peut quant-à lui avoir une fonction manger qui augmente sa taille et son poids.
+
+Chaque objet possède donc des caractéristiques et des fonctions. Comme tous les objets que l'on rencontre tous les jours~!
+
+\helpbox{Info}{on appelle les caractéristiques des objets sont quant-à elles appelées \og méthodes\fg.}
+
+\section{Accessibilité}
+
+Pour chaque élément (caractéristique, fonction ou classe), vous devez définir
+son niveau de visibilité. Les deux niveaux les plus courants sont \verb+public+
+et \verb+private+. Lorsqu'un élément est définit comme \verb+public+, il est
+accessible et modifiable (sauf les méthodes) depuis n'importe quelle autre
+classe. Lorsque vous définissez un élément comme \verb+private+, il accessible
+et modifiable uniquement depuis la classe qui les définie.
+
+\section{Les différent types de variables}
+
+Pour rappeler, une variable permet de stocker une donnée d'un type définie
+dans la mémoire vive de l'ordinateur, un entier par exemple. Ces données
+peuvent être simples~: un entier, un caractère, un peu plus évoluées~: un
+chaîne de caractères, une position dans le plan ou encore plus complexe~: un
+moteur graphique, physique \ldots
+
+Ces trois types de variables servent à stocker et à accéder à ces valeurs.
+
+\subsection{Les attributs}
+
+Ce sont les \og véritables variables \fg. La quasi-totalité du temps elles sont
+déclarées privé car on préfère les modifier depuis des méthodes ou des
+accesseurs. Elles se déclarent de cette façon, juste après le début d'une
+classe~:
+
+\begin{lstlisting}
+private int myVar;
+\end{lstlisting}
+
+\subsection{Les propriétés}
+
+Ce sont des attributs \og améliorés \fg. Il est possible de déclarer des
+propriétés publiques et de limiter la lecture ou l'écriture depuis les autres
+classes. Elles se déclarent de cette façon~:
+
+\begin{lstlisting}
+public int MyProperty
+{
+  get;
+  private set;
+}
+\end{lstlisting}
+
+Si on enlève le \verb+private+ devant le \verb+set+, il est alors possible de
+modifier la variable depuis une autre classe.
+
+\subsection{Les accesseurs}
+
+À cheval entre les méthodes et les propriétés, les accesseurs se déclarent de
+la même manière que les propriétés mais ont un fonctionnement proche des
+méthodes. Par exemple, pour accéder à notre attribut \verb+myVar+, déclarée
+plus haut, depuis une autre classe, on écrira~:
+
+\begin{lstlisting}
+public int MyAcc
+{
+  get
+  {
+    return this.myVar;
+    }
+}
+\end{lstlisting}
+
+Vous pouvez également définir la partie \verb+set+ lorsque vous souhaitez
+pouvoir définir l'attribut en question. Ce qui donne l'accesseur suivant~:
+
+\begin{lstlisting}
+public int myAcc
+{
+  get
+  {
+    return this.myVar;
+    }
+    set
+    {
+      this.myVar = value;
+      }
+}
+\end{lstlisting}
+
+Le mot clé \verb+value+ correspond à la valeur passé à l'accesseur lorsqu'il
+est appelé~:
+
+\begin{lstlisting}
+MyClasse instance = new myClass();
+instance.MyVar = 42;
+\end{lstlisting}
+
+Dans cet exemple, \verb+value+ vaudra donc 42.
+
+Il est tout à fait possible (et c’est même encouragé) de tester la valeur passé
+à l'accesseur. Vous pouvez en effet faire tous les tests que vous voulez mais
+aussi modifier d'autres attributs ou propriétés de manière à ce qu'elles
+restent toutes cohérentes.
+
+Par exemple, remettre à 0 une variable lorsque vous en modifiez une autre~:
+\begin{lstlisting}
+public int myAcc
+{
+  get
+  {
+    return this.myVar;
+    }
+    set
+    {
+      if (value > 0)
+      {
+        this.myVar = value;
+        this.incr = 0;
+        }
+        }
+}
+\end{lstlisting}
+
+Ici, l'attribut \verb+myVar+ n'est modifié que si la valeur passé est
+supérieure à 0 et dans ce cas, l'attribut \verb+incr+ est définit à 0.
+
+\section{Instanciation de classes}
+
+Commençons par rappeler la déclaration d'une variable de base~:
+
+\begin{lstlisting}
+int a = 42;
+\end{lstlisting}
+
+On indique ici au compilateur que la variable \verb+a+ est de type entier
+(\verb+int+) et vaut 42 à son initialisation. En effet chaque variable doit
+avoir un type défini. Les structure et les classes sont des types de données.
+
+Prenons comme exemple la classe Point. Pour créer un nouveau point, on fait
+ainsi~:
+
+\begin{lstlisting}
+Point b = new Point(2, 4);
+\end{lstlisting}
+
+Ici, le premier \verb+Point+ indique le type de la variable \verb+b+. Le deuxième initialise la variable en appelant le constructeur de \texttt{Point} avec les deux arguments qu'il attend.

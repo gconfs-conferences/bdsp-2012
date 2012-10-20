@@ -1,0 +1,65 @@
+%Version en ligne
+\documentclass[12pt,a4paper]{report}
+%Version imprimable
+%\documentclass[12pt,a4paper,twoside,openright]{report}
+
+\input{preambule}
+
+\begin{document}
+
+\title{
+  \vspace{1cm}
+  \textbf{\Huge{\Tp{} Subversion}}\\
+  \vspace{1.5cm}
+  \includegraphics[scale=5]{images/logo_svn.png}
+  \hspace{1cm}
+  \includegraphics[scale=0.5]{images/logo_tortoise.png}
+}
+\author{
+  Pierre-Olivier \textit{Némunaire} \textsc{Mercier} (\ttfamily{mercie\_d})\\
+}
+\date{
+  \includegraphics[scale=0.5]{images/gconfs.png}\\
+  \vspace{1cm}
+  Vendredi 03 décembre 2010
+}
+
+% ************************
+% *     introduction     *
+% ************************
+\maketitle
+
+\tableofcontents
+
+% ************************
+% *    contenu du doc    *
+% ************************
+
+\include{S_intro}
+
+\include{S_architecture}
+
+\include{S_installation}
+
+\include{S_basic}
+
+\include{S_advanced}
+
+\include{S_integrated}
+
+\include{S_conclusion}
+
+% *************************
+% *        annexes        *
+% *************************
+\appendix
+
+\include{S_A_depot}
+
+%\include{S_A_trac}
+
+% *************************
+% *    fin du document    *
+% *************************
+%\listoffigures
+\end{document}

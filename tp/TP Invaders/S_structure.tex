@@ -1,0 +1,103 @@
+\chapter{Présentation de la surcouche}
+
+Avant de rentrer dans la réalisation de votre Space Invaders, nous allons vous présenter la surcouche que vous allez utiliser par la suite.
+
+Le but de cette surcouche est de vous permettre d'avoir rapidement un rendu du jeu. En effet, les moteurs graphiques, sonores ont déjà été codés ainsi que la capture des événements utilisateur (appuie sur une touche du clavier, \ldots).\\
+
+Vous n'avez normalement pas à modifier la surcouche~; vous la trouverez peut-être très restrictive, elle a été faite pour faciliter la tâche aux plus débutants d'entre-vous. Dans un premier temps, contentez-vous-en, puis arrivé à la fin, nous vous encourageons à refaire la surcouche afin de l'adapter à vos besoins.
+
+\section{Arborescence}
+
+\begin{itemize}
+  \item \texttt{SpaceInvaders/}~: répertoire de base du projet.
+  \item \texttt{SpaceInvaders/Content/}~: répertoire contenant les ressources graphiques et sonores du jeu.
+  \item \texttt{SpaceInvaders/Game/}~: répertoire dans lequel nous vous invitons à placer les classes que vous allez créer durant la soirée.
+  \item \texttt{SpaceInvaders/Structure/}~: répertoire contenant toutes les classes de la surcouche graphique.
+\end{itemize}
+
+
+\section{Classes de base}
+
+Certaines classes sont plus utilisées que d'autres. Il est commun d'associer deux entiers afin d'indiquer une position $(x, y)$, ou encore de représenter une surface $(x, y, largeur, hauteur)$.
+
+Vous avez pour cela les classes \texttt{Point} et \texttt{Rectangle}.
+
+\subsection{\texttt{Point}}
+
+La classe \texttt{Point} vous permet d'enregistrer la position d'un élément dans le plan. Vous pouvez très bien le faire avec deux entiers, mais il est souvent plus commode d'utiliser une classe à part entière, qui définit déjà tout un tas d'opérations utiles.\\
+
+Le constructeur de la classe prend deux entiers~: $x$ et $y$. À tout moment, vous pouvez accéder aux coordonnées d'un point grâce aux propriétés $X$ et $Y$ de la classe.
+
+\subsection{\texttt{Rectangle}}
+
+La classe \texttt{Rectangle} vous permet d'enregistrer la position d'une surface dans le plan.\\
+
+Le constructeur de la classe prend quatre entiers en argument~: $x$, $y$, $width$ la largeur et $height$ la hauteur. Les propriétés $X$, $Y$, $Width$ et $Height$ vous premettent d'accéder et de modifier à tout moment les valeurs correspondantes.
+
+
+\section{Classes et énumérations}
+
+\subsection{\texttt{Textures}}
+
+L'énumération \texttt{Textures} contient l'ensemble des sprites utilisables d'origine. C'est un élément de cette énumération que vous allez devoir passer au moteur graphique de la surcouche.
+
+\subsection{\texttt{Color}}
+
+Cette classe représente une couleur à 4 composantes~: rouge, vert, bleu et le canal alpha.\\
+
+Les couleurs les plus utilisées sont déjà définies de manière statique, et s'utilisent à la manière d'une énumération.
+
+Si aucune couleur ne vous convient, il est toujours possible d'en créer une en utilisant l'un des constructeur de la classe~: ceux-ci prennent 3 ou 4 arguments \texttt{byte} (octet, entiers allant de 0 à 255)~: $r$ pour la composante rouge, $g$ pour la composante verte, $b$ pour la composante bleue et optionnellement $a$ le canal alpha.
+
+Comme pour les autres classes, vous pouvez utilisez les propriétés $R$, $G$, $B$ et $A$ pour récupérer ou définir la valeur de chacune des composantes.
+
+\subsection{\texttt{Fonte}}
+
+Cette classe permet de définir une police à utiliser lors de l'affichage d'un texte par le moteur graphique.\\
+
+Les polices proposées par défaut dans le répertoire de contenu sont directement accessible via des propriétés statiques à la manière des énumérations.
+
+\section{Le moteur graphique}
+
+À partir de la classe \texttt{General} fournie dans le dossier \texttt{Game}, vous accéderez au moteur graphique grâce à l'instance de \texttt{GraphEngine} nommée \texttt{moteur}.\\
+
+Sachez que le moteur graphique dessine à chaque passe uniquement l'ensemble des éléments que vous lui avez passé après le dernière rendu puis l'ensemble des messages de la même manière.
+
+Si deux éléments ce cheuvauchent, les éléments textuels seront affichés au dessus des sprites.
+
+%\subsection{La classe {\texttt GraphicElts}}
+
+%Cette classe représente une texture associée à d'autres propriétés nécessaire au moteur graphique afin de la placer au bon endroit et dans la bonne couleur.\\
+
+%Les constructeurs de cette classe prennent en argument~: une texture issue de l'énumération \texttt{Textures} et une position sous la forme d'un \texttt{Point}. Optionnellement, le constructeur prend une couleur qui sera appliqué à la texture avant l'affichage.\\
+
+%Une fois l'élément crée, il n'est pas possible de modifier ces propriétés.\
+
+%\subsection{La classe {\texttt Texte}}
+
+%De la même manière que la classe {\texttt GraphicElts}, \texttt{Texte} permet de définir les propriétés d'affichage d'une chaîne à l'écran.
+
+\subsection{Méthodes utiles}
+\label{ssec:methodutiles}
+
+Deux méthodes vous seront utiles dans la multitude de méthodes du moteur graphique~:
+
+\begin{itemize}
+  \item \textbf{\texttt{addElement}~:} ajoute un élément graphique à afficher. Cette méthodes prend comme arguments~: une texture issue de l'énumération \texttt{Textures} associé à un \texttt{Point} donnant la position du point haut gauche de la texture. Optionnellement, vous pouvez ajouter un argument \texttt{Color} donnant la couleur à appliquer à l'élément (par défaut blanc).
+    \item \textbf{\texttt{addString}~:} ajoute un texte à afficher lors de la prochaine passe de rendu. Cette méthode prend en arguments~: une chaîne de caractères ainsi qu'un \texttt{Point} indiquant la position haute gauche du premier caractère. Optionnellement, la méthode peut prendre une couleur et une police (classe \texttt{Fonte}).
+\end{itemize}
+
+
+\section{Gestion des actions de l'utilisateur}
+
+Plusieurs événements relatif au clavier sont disponibles dans l'instance \texttt{actions} dans la classe \texttt{General}.
+
+Si vous ne connaissez pas encore les événements, vous trouverez un excellent tuto ici~: \url{http://freddyboy.developpez.com/dotnet/articles/events/}, vous pouvez aussi demander à un assistant de vous expliquer s'ils ne sont pas trop occupés~!
+
+\subsection{Événements disponibles}
+
+Un événement est déclenché lorsque l'utilisateur appuie (\texttt{OnKeyDown}) ou relache une touche (\texttt{OnKeyPressed}).
+
+L'instance de \texttt{GUI} (\texttt{action}) vous propose de capturer ces événements.
+
+Une fois capturés, récupérez, dans l'argument \texttt{e} instance de la classe \texttt{KeyboardEventArgs}, le code de la touche via la propriété \texttt{KeyString}.

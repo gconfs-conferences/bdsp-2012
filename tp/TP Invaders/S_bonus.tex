@@ -1,0 +1,50 @@
+\chapter{Bonus}
+
+Vous avez déjà terminé le jeu~? Vous pouvez y jouer, vous déplacer, tuer des monstres, perdre, \ldots~?
+
+Ce chapitre est pour vous dans ce cas.
+
+\section{Écrans de GameOver et menu}
+
+Le jeu est pour l'instant jouable, mais il lui manque encore un menu et un écran de \emph{game over}.\\
+
+Ajoutez quelques variables dans la classe principale afin de savoir si le jeu est lancé. Auquel cas, l'affichage différe entre un menu dont on doit pouvoir choisir les éléments grâce aux touches du clavier et le jeu.
+
+
+\section{Envoyer les scores sur le serveur}
+
+Comparez vos performances à Space Invaders avec vos amis en envoyant, via des requêtes HTTP vos scores en fin de partie.\\
+
+Envoyez en utilisant la méthode POST votre score sur \url{http://etud.epita.fr/~mercie_d/GConfs/scores.php}. Le nom du champ pour indiquer le score est \texttt{score}. Envoyez avec obligatoirement le champ \texttt{game} contenant le nom de votre jeu avec sa version.
+
+Lorsque vous gérez tout cela, vous pouvez ajouter le champ \texttt{name} qui contiendra le nom de l'utilisateur que vous demanderez sur l'écran de \emph{game over}.
+
+
+\section{Réaliser un programme d'installation}
+
+De nombreux logiciels libres vous permettent de faire ce genre de choses. En utilisant \href{http://nsis.sourceforge.net/}{Nullsoft Scriptable Install System}, vous pourrez installer les dépendances de votre projet si elles ne sont pas déjà présentes~: le framework \textsc{.net} 3.5 et \textsc{xna} 3.1.
+
+
+\section{Réaliser un rapport et une présentation pour la soutenance devant les assistants}
+
+Utilisation de \LaTeX obligatoire tant pour le rapport que pour la présentation (\href{http://lmgtfy.com/?q=beamer}{Beamer}).\\
+
+Voici un plan type pour le rapport, le déroulement de la soutenance pourra s'inspirer du même plan~:
+
+\begin{enumerate}
+  \item Introduction
+  \item Présentation de l'équipe
+  \item Présentation du projet
+  \item Fonctionnalités
+  \item Conclusion
+\end{enumerate}
+
+
+\section{Recoder MAME}
+
+\textsc{mame} est un acronyme signifiant \og Multiple Arcade Machine Emulator\fg. Il s'agit, comme son nom l'indique, un émulateur de borne d'arcade. Votre jeu n'étant pas si fidèle que ça à l'original, vous ne pourrez contentez \textit{Colona} qu'en lui proposant de rejouer au jeu original tel qu'il a été développé par Nishikado.
+
+
+\section{Descent}
+
+Arrivé à ce stade, nous vous proposons de passer au second deuxième \tp. Mais au point où vous en êtes, il n'aura pas de secret pour vous. Cela vous permettra cependant de découvrir une API 3D, mais vous en saurez plus en lisant le sujet.

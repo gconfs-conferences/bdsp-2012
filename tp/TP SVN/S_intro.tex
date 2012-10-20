@@ -1,0 +1,18 @@
+\chapter{Introduction}
+
+\section{Présentation du \tp}
+
+Ce premier \tp{} a pour but principal de vous familiariser avec un logiciel de versionnement. Pour votre premier contact avec ce genre de logiciel, nous avons choisi de vous décrire l'utilisation de \href{http://subversion.tigris.org/}{Subversion} (plus couramment abbrégé par \textsc{svn}) avec le logiciel \href{http://tortoisesvn.tigris.org/}{TortoiseSVN}.
+
+Il existe bien entendu d'autres méthodes pour gérer les versions de votre code, parfois plus complètes, mais très souvent plus complexes à utiliser.\\
+
+La conférence à laquelle vous venez d'assister vous a présenté toutes les informations à connaître pour pouvoir utiliser un gestionnaire de versionnement~; la partie suivante n'est qu'une transcription de ce qui a été dit durant la conférence, si vous avez compris le principe de ce genre de programme, passez directement au chapitre suivant.
+
+
+\section{Les gestionnaires de versions}
+
+Les logiciels de versionnement ont pour but de garder une trace de chaque modification que vous avez pu effectuer dans une arborescence de fichiers. Lorsque l'on travaille en équipe, chaque utilisateur possède sur son (ou ses !) ordinateur une copie locale du projet sur lequel il pourra effectuer les modifications qu'il voudra. À intervalle régulier, chacun ira récupérer les modifications effectuées par les autres et enverra également les siennes sur un serveur central (appelé \emph{dépôt} ou \emph{repository} en anglais) dans le cas de \svn.
+
+Comme chaque utilisateur envoie ses modifications sur le serveur régulièrement, chacun a dans son répertoire de travail, toujours une version à jour du projet.\\
+
+Mieux encore~: lorsque deux utilisateurs modifient un même fichier, Subversion est capable de fusionner les modifications. Faire ça à l'aide de l'explorateur Windows de façcon régulière à coup de copie et de fusion grossière demande beaucoup plus d'attention, et cela se termine bien souvent par un fichier malencontresement écrasé, source de bug de dernière minute.
