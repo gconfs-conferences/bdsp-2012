@@ -1,0 +1,148 @@
+\documentclass[12pt,a4paper,frenchb]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{listings}
+\usepackage{palatino}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{graphicx}
+
+\definecolor{blue}{rgb}{0.13,0.29,0.46}
+\definecolor{black}{rgb}{0,0,0}
+\definecolor{white}{rgb}{1,1,1}
+
+\textwidth 16cm
+\textheight 27.5cm
+\headsep 0.5cm
+\topmargin -4cm
+\oddsidemargin -0.5cm
+
+\newcommand{\elt}[1]{\textcolor{blue}{#1}}
+\newcommand{\fillbox}[2]{\vspace{0.8em}\fcolorbox{black}{white}{\parbox{#1}{#2}}\vspace{1em}}
+
+\title{Organisation d'un \'ev\`enement}
+\author{Par l'association \textcolor{blue}{\textsc{gc}onfs}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hspace{1.25em}Type de soir\'ee~:
+\hspace{0.5em}\elt{Conf\'erence}
+
+%% \hspace{0.5em}Type de journ\'ee~:
+%% \hspace{0.5em}\elt{test}
+
+\fillbox{\linewidth}{\hspace{4em}\textbf{Date(s)~:}
+\hspace{0.2em}\elt{26/10/2012 - 27/10/2012}
+\hspace{3em}\textbf{Horaires~:}
+\hspace{0.2em}\elt{19h00-8h00}
+
+\vspace{0.2em}
+\hspace{1em}Responsable(s)~:
+\hspace{0.3em}\elt{Paul \bsc{Hervot}}
+
+\hspace{1em}T\'el\'ephone~:
+\hspace{0.3em}\elt{+33~(0)6~98~29~32~36}
+
+\hspace{1em}Classe~:
+\hspace{0.3em}\elt{Info\textsc{sp\'e} B2 (\textsc{Epita 2016})}
+}
+
+\mbox{\hspace{.58\linewidth}\fillbox{.42\linewidth}{
+\hspace{0.25em}$\blacksquare$\hspace{0.5em}Membres
+
+\hspace{0.25em}$\blacksquare$\hspace{0.5em}\'Elèves du groupe \textsc{Ionis}
+
+\hspace{0.25em}$\square$\hspace{0.5em}\sout{Externes}}}
+
+\vspace{-35pt}
+\hspace{0.5em}Nombre de personnes pr\'evues~:
+\hspace{0.5em}\elt{150}
+
+\hspace{8.5em}Dont externe~:
+\hspace{0.5em}\elt{0}
+
+\vspace{2em}
+\textbf{Description du type d'\'ev\`enement~:}
+\vspace{0.6em}
+
+\hspace{0.5em}
+\parbox{.9\linewidth}{
+	\elt{Conf\'erence \og Bien Démarrer Son Projet \fg~suivie d'un TP en salle machine}
+        \vspace{0.5em}\\
+        \elt{Destinée à un public d'INFO-SUP, la conférence a pour but de donner des conseils pour aborder correctement et sereinement le projet de première année}
+}
+
+\vspace{1em}
+\textbf{Avez-vous une assurance responsabilit\'e civile~:}
+
+\hspace{0.5em}
+\parbox{.9\linewidth}{
+	\elt{Non}
+}
+
+\vspace{1em}
+\textbf{Le site~:}
+
+\hspace{0.5em}
+\parbox{.9\linewidth}{
+	\elt{IIT, Villejuif}
+}
+
+\vspace{1em}
+\textbf{Salles pr\'evues~:}
+
+\hspace{0.5em}
+\parbox{.9\linewidth}{
+    Conférence : \elt{VA~204},\\
+    TP : \elt{VA~302}, \elt{VA~303}, \elt{VA~304}
+}
+
+\vspace{1em}
+\textbf{Mat\'eriel pr\'esent~:}
+
+\hspace{0.5em}
+\parbox{.9\linewidth}{
+	\elt{Ordinateur portable conférencier}
+}
+
+\vspace{1em}
+\textbf{Boisson pr\'evue~:}
+
+\hspace{0.5em}
+\parbox{.9\linewidth}{
+	\elt{Non}
+}
+
+%% \vspace{1em}
+%% \textbf{Remarques sp\'eciales concernant l’\'ev\`enement~:}
+%%
+%% \hspace{0.5em}
+%% \parbox{.9\linewidth}{
+%% 	\elt{-------}
+%%
+%% 	\elt{-------}
+%% }
+%%
+\vspace{0.5em}
+\fillbox{0.3\linewidth}{
+	\vspace{-1em}\center{Signature du responsable de l’\'ev\`enement~:}
+        \includegraphics[scale=0.055]{sign_dettorer.jpg}\\
+	Sign\'e le~: \dotuline{15/10/2012}
+}
+\fillbox{0.3\linewidth}{
+	\vspace{-1em}\center{Signature du pr\'esident de l'association~:}
+        \includegraphics[scale=0.146]{sign_chewie.png}\\
+	Sign\'e le~: \dotuline{15/10/2012}
+}
+\fillbox{0.3\linewidth}{
+	\vspace{-1em}\center{Signature du responsable des associations~:}\vspace{5em}
+
+	Sign\'e le~: \dotuline{~~~~~/~~~~/~~~~~~}
+}
+
+\end{document}
