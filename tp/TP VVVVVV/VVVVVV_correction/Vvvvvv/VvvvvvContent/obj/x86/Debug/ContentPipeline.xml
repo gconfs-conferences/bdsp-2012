@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>heros.png</Source>
+      <Name>heros</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\heros.xnb</Output>
+      <Time>2011-11-18T15:47:10+01:00</Time>
+    </Item>
+    <Item>
+      <Source>mur.png</Source>
+      <Name>mur</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\mur.xnb</Output>
+      <Time>2011-11-18T16:42:34+01:00</Time>
+    </Item>
+    <Item>
+      <Source>fondNoir.png</Source>
+      <Name>fondNoir</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\fondNoir.xnb</Output>
+      <Time>2011-11-13T20:38:46+01:00</Time>
+    </Item>
+    <Item>
+      <Source>pic.png</Source>
+      <Name>pic</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\pic.xnb</Output>
+      <Time>2011-11-14T14:38:52+01:00</Time>
+    </Item>
+    <Item>
+      <Source>teleporteur.png</Source>
+      <Name>teleporteur</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\teleporteur.xnb</Output>
+      <Time>2011-11-14T22:51:42+01:00</Time>
+    </Item>
+    <Item>
+      <Source>barreRebondissante.png</Source>
+      <Name>barreRebondissante</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\barreRebondissante.xnb</Output>
+      <Time>2011-11-20T15:45:12+01:00</Time>
+    </Item>
+    <Item>
+      <Source>barreMouvante.png</Source>
+      <Name>barreMouvante</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\barreMouvante.xnb</Output>
+      <Time>2011-11-20T18:01:42+01:00</Time>
+    </Item>
+    <Item>
+      <Source>ilove.png</Source>
+      <Name>ilove</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\ilove.xnb</Output>
+      <Time>2011-11-20T18:44:08+01:00</Time>
+    </Item>
+    <Item>
+      <Source>VVVVVVsong.mp3</Source>
+      <Name>VVVVVVsong</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\VVVVVVsong.xnb</Output>
+      <Extra>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\VVVVVVsong.wma</Extra>
+      <Time>2010-08-21T16:06:14+02:00</Time>
+    </Item>
+    <Item>
+      <Source>complete.png</Source>
+      <Name>complete</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\Content\complete.xnb</Output>
+      <Time>2011-11-21T18:16:52+01:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVVContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVVContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-11-12T11:45:13.6756813+01:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

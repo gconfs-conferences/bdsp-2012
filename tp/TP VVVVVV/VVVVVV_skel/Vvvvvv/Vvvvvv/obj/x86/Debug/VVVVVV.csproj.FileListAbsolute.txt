@@ -1,0 +1,58 @@
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\VVVVVV.exe
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\VVVVVV.pdb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\obj\x86\Debug\VVVVVV.exe
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\obj\x86\Debug\VVVVVV.pdb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\Content\heros.xnb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\Content\mur.xnb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\Content\fondNoir.xnb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\Content\pic.xnb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\Content\teleporteur.xnb
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\heros.xnb
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\sprites.xnb
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\mur.xnb
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\carlageNoir.xnb
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\fondNoir.xnb
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\pic.xnb
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\teleporteur.xnb
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\bin\x86\Debug\VVVVVV.exe
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\bin\x86\Debug\VVVVVV.pdb
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\obj\x86\Debug\VVVVVV.exe
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\Vvvvvv\obj\x86\Debug\VVVVVV.pdb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\barreRebondissante.xnb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\heros.xnb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\sprites.xnb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\mur.xnb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\carlageNoir.xnb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\fondNoir.xnb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\pic.xnb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\teleporteur.xnb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\barreRebondissante.xnb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\VVVVVV.exe
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\VVVVVV.pdb
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\obj\x86\Debug\VVVVVV.exe
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\Vvvvvv\obj\x86\Debug\VVVVVV.pdb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\barreMouvante.xnb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\ilove.xnb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\VVVVVVsong.xnb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\VVVVVVsong.wma
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVV\bin\x86\Debug\Content\complete.xnb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\ilove.xnb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\bin\x86\Debug\VVVVVV.exe
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\bin\x86\Debug\VVVVVV.pdb
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\obj\x86\Debug\VVVVVV.exe
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\obj\x86\Debug\VVVVVV.pdb
+C:\Users\TheneDiel\Documents\Visual Studio 2010\Projects\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\bin\x86\Debug\Content\ilove.xnb
+C:\Users\TheneDiel\Documents\Visual Studio 2010\Projects\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\bin\x86\Debug\VVVVVV.exe
+C:\Users\TheneDiel\Documents\Visual Studio 2010\Projects\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\bin\x86\Debug\VVVVVV.pdb
+C:\Users\TheneDiel\Documents\Visual Studio 2010\Projects\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\obj\x86\Debug\VVVVVV.csprojResolveAssemblyReference.cache
+C:\Users\TheneDiel\Documents\Visual Studio 2010\Projects\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\TheneDiel\Documents\Visual Studio 2010\Projects\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\obj\x86\Debug\VVVVVV.exe
+C:\Users\TheneDiel\Documents\Visual Studio 2010\Projects\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\Vvvvvv\obj\x86\Debug\VVVVVV.pdb

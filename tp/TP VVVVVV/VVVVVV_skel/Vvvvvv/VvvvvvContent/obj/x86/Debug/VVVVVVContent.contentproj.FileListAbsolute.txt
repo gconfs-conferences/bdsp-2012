@@ -1,0 +1,5 @@
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV\VVVVVV\VVVVVVContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Titou\Dropbox\Vvvvvv\Vvvvvv\VVVVVVContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Titou\Dropbox\DarK_PheOniX\VVVVVV\Vvvvvv\VVVVVVContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Titou\Documents\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\VVVVVVContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\TheneDiel\Documents\Visual Studio 2010\Projects\Visual Studio 2010\Projects\VVVVVV_skel\Vvvvvv\VVVVVVContent\obj\x86\Debug\VVVVVVContent.contentprojResolveAssemblyReference.cache
